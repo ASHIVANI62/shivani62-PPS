@@ -5,5 +5,5 @@ int main()
 	printf("Enter the number:");
 	scanf("%d",number);
 	printf("%d",(~0<<1)&number);
-	
+	return 0;
 }

@@ -8,27 +8,14 @@ int main()
 	
 	per = (sub1+sub2+sub3+sub4+sub5)/5.0;
 	
-	if(per >= 60)
-	{
-		printf("Grade A\n");
-	}
-	else
-	{
-		if(per >= 50)
-		{
-			printf("Grade B\n");
-		}
-		else
-		{
-			if(per>= 40)
-			{
-				printf("Grade C\n");
-			}
-			else
-			{
-				printf("fail\n");
-			}
-		}
-	}
+	if(per>=0&&per<40)
+		printf("failed\n");
+	else if(per>=40&&per<60)
+	    printf("second class\n");
+	else if(per>=60&&per<70)
+		printf("first class\n");
+	else if (per>=70&&per<=100)
+		printf("distinction\n");
+
 
 }

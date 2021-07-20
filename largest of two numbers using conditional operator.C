@@ -1,20 +1,10 @@
 #include<stdio.h>
 int main()
 {
-	int a, b;
+	int a, b,large;
 	printf("enter two different numbers\n");
 	scanf("%d%d",&a,&b);
-	if(a>b)
-	{
-		printf("%d is largest\n",a);
-	}
-	else if(b>a)
-	{
-		printf("%d is largest\n",b);
-	}
-	else
-	{
-		printf("Both are equal\n");
-	}
+	(a>b)?(large=a):(large=b);
+		printf("largest of %d and %d is %d\n",a,b,large);
 	return 1;
 }
