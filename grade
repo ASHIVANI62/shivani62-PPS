@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+	int EM,PPS,AP;
+	float sum,per;
+	printf("\n Enter 3 subjects marks (<100) :");
+	scanf("%d%d%d",&EM,&PPS,&AP);
+	sum=EM+PPS+AP;
+	per=(sum/300)*100;
+	printf("\n The percentage is %f",per);
+	if(per>=90)
+	   printf("\n The Grade is A+");
+	else if(per>=80 && per<90)
+	   printf("\n The grade is A");
+	else if(per>=65 && per <80) 
+	   printf("\n The grade is B+");
+	else if(per>=50 && per<60)
+	   printf("\n The grade is B");
+	else if(per>=35 && per<50)
+	   printf("\n The grade is C");
+	else
+	   printf("\n FAILED");
+	
+	   
+	
+	
+	return 1;
+}
