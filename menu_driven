@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int option;
+int menu(void);
+int small(int u, int w, int x, int y, int z);
+int large(int u, int w, int x, int y, int z);
+int sum(int u, int w, int x, int y, int z);
+int avg(int u, int w, int x, int y, int z);
+
+int a;
+int b;
+
+int one;
+int two;
+int three;
+int four;
+int five;
+
+int main(void)
+{
+	option= menu();
+	printf("\n Please enter 5 integers:");
+	scanf("%d%d%d%d%d",&one,&two,&three,&four,&five);
+	
+	switch(option)
+	   {
+		case 1: small(one, two, three, four, five);
+		        break;
+		case 2: large(one, two, three, four, five);
+		        break;
+		case 3: sum(one, two, three, four, five);
+		        break;
+		case 4: avg(one, two, three, four, five);		        
+	   }
+	return 0;
+}
+
+int menu(void)
+{
+	int option;
+	printf  ("\t************************");
+	printf("\n\t*       MENU            ");
+	printf("\n\t*                      *");
+	printf("\n\t*   1. SMALLEST        *");
+	printf("\n\t*   2. LARGEST         *");
+	printf("\n\t*   3. SUM             *");
+	printf("\n\t*   4. AVERAGE         *");
+	printf("\n\t)***********************");
+	printf("\n Please type your choice: ");
+	scanf ("%d",&option);
+	if (option>4)
+	{
+		printf("INVALID CHOICE");
+	}
+	return option;
+}
+
+int small(int u, int w, int x, int y, int z)
+{
+	if(one<two && one<three && one<four && one<five)
+	   printf("%d", one);
+	else if(two<one && two<three && two<four && two<five)
+	   printf("%d", two);
+	else if (three<one && three<two && three<four && three<five)
+	   printf("%d", three);
+	else if (four<one && four<two && four<three && four<five)
+	   printf("%d", four);
+	else
+	   printf("%d", five);           
+}
+
+int large(int u, int w, int x, int y, int z)
+{
+	if (one>two && one>three && one>four && one>five)
+	    printf("%d", one);
+	else if (two>one && two>three && two>four && two>five)
+	    printf("%d", two);
+	else if (three<one && three<two && three<four && three<five)
+		printf("%d", three);
+	else if (four<one && four<two && four<three && four<five)
+		printf("%d", four);
+	else
+		printf("%d", five);    
+}
+
+int sum(int u, int w, int x, int y, int z)
+{
+	int a = one + two + three + four + five;
+	printf("%d",a);
+	return(0);
+}
+
+int avg(int u, int w, int x,int y, int z)
+{
+	int b = (one + two + three + four + five)/5;
+	printf("%d", b);
+	return 0;
+}
