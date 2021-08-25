@@ -1,0 +1,25 @@
+#include<stdio.h>  
+  void main()
+{
+FILE *fptr; 
+ char ch; 
+fptr=fopen("SampleFile5.txt","w");
+if(fptr==NULL)
+	printf("Unsuccessfull");
+ printf("\n input data \n");  
+  while((ch=getchar())!='$') 
+  {
+fputc(ch,fptr);  
+  }
+  fprintf(fptr,"hello");
+  fclose(fptr); 
+fptr=fopen("SampleFile5.txt","r");
+if(fptr)
+printf("\n File Re-Opened\n");
+  while((ch=fgetc(fptr))!=EOF) 
+  {
+printf("%3c",ch); 
+  }
+fclose(fptr); 
+
+}
