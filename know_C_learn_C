@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+	float x = 5.25;	
+	double y = 5.25;
+	
+	
+	if(x == y)
+		printf("Learn C");
+	else
+		printf("Know C");
+	return 0;
+}
