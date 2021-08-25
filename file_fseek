@@ -1,0 +1,32 @@
+//random access files
+//rewind(ptr):resets file pointer to starting of file
+//ftell(ptr):returns current possition of file pointer
+//fseek(ptr,displacement,position): 
+//sets file pointer to specified possition
+// displacement : number of bytes move fwd or backwrd
+//possition: 0 : from starting of file
+// possition: 1: from current location
+// possition: 2 : from end of file 
+#include<stdio.h>
+int main(){
+	FILE *ptr;
+	char ch;
+	ptr = fopen("emp.txt","w");
+	printf("\npos of cursor :%d\n",ftell(ptr));
+
+	while((ch =getchar())!='#'){
+		putc(ch,ptr);
+	}
+	printf("\npos of cursor :%d\n",ftell(ptr));
+	fclose(ptr);
+	ptr = fopen("emp.txt","r");
+	fseek(ptr,6L,0);
+	while((ch =getc(ptr))!=EOF){
+		printf("%c",ch);
+	}
+	rewind(ptr);
+	printf("\npos of cursor :%d\n",ftell(ptr));
+
+	
+	fclose(ptr);
+}
