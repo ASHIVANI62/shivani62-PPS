@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	 int size;
+	 long long int a;
+	size=sizeof(unsigned int);
+    printf("\n Size of a= %d",size);
+}
