@@ -1,0 +1,27 @@
+#include<stdio.h>  
+  void main()
+{
+FILE *fptr;
+int num; 
+ char ch; 
+fptr=fopen("SampleFile6.txt","w");
+if(fptr==NULL)
+	printf("ghgh");
+ printf("\n input data \n");  
+  while(num!=-1) 
+  {
+  	scanf("%d",&num);
+putw(num,fptr);  
+  }
+  fprintf(fptr,"hello");
+  fclose(fptr); 
+fptr=fopen("SampleFile6.txt","r");
+if(fptr)
+printf("\n File Re-Opened\n");
+  while((num=getw(fptr))!=EOF) 
+  {
+printf("%5d",num); 
+  }
+fclose(fptr); 
+
+}
